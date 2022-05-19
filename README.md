@@ -1,6 +1,7 @@
 # aviation-apps-starter
 
-Literally a powershell script I made to start aviation software because I can not be asked to click them all every time I restart the pc
+Literally a powershell script I made to start aviation software because I can not be asked to click them all every time I restart the pc.
+It also contains a script that will rename the FlyByWire MCDU server file to an appropriate file name (so it can be found in task manager)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y1ACFQW)
 
