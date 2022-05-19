@@ -126,6 +126,7 @@ if ($launchermode -match "S2") {
 
 if ($launchermode -match "S3") {
 	
+	powershell -window Hidden -command "'Hiding window'"
 	LauncherStart-Trackers
 	exit
 	
