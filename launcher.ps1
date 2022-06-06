@@ -13,7 +13,7 @@ write-host "  "
 write-host "  SA - Launch everything (installers, tools, trackers, fbw tools)"
 write-host "  S1 - Launch installer apps (Navdata, FBW)"
 write-host "  S2 - Launch tools (simlink, spad)"
-write-host "  S3 - Launch trackers (LRM, Volanta)"
+write-host "  S3 - Launch trackers (LRM, Volanta, SkyDolly, FlightEvents)"
 write-host "  S4 - Launch flybywire tools"
 write-host "  S5 - Launch com tools (choose)"
 write-host "  SM - Launch MSFS"
@@ -46,6 +46,8 @@ function LauncherStart-Tools {
 function LauncherStart-Trackers {
 	start  ".\Volanta.lnk"
 	start ".\Landing Rate Monitor.lnk"
+    start ".\SkyDolly.lnk"
+    start " .\FlightEvents.Client.lnk"
 }
 
 function LauncherStart-Installers {
@@ -191,6 +193,8 @@ if ($launchermode -match "OX") {
 	taskkill /IM "SPAD.neXt.exe" /F
 	taskkill /IM "Volanta.exe" /F
 	taskkill /IM "LRM.exe" /F
+	taskkill /IM "SkyDolly.exe" /F
+        taskkill /IM "FlightEvents.Client.exe" /F
 	taskkill /IM "FlyByWire Installer.exe" /F
 	taskkill /IM "FBW_MCDU_SERVER.exe" /F
 	
