@@ -46,8 +46,8 @@ function LauncherStart-Tools {
 function LauncherStart-Trackers {
 	start  ".\Volanta.lnk"
 	start ".\Landing Rate Monitor.lnk"
-    	start ".\SkyDolly.lnk"
-    	start " .\FlightEvents.Client.lnk"
+    start ".\SkyDolly.lnk"
+    start ".\FlightEvents.Client.lnk"
 }
 
 function LauncherStart-Installers {
