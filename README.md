@@ -35,3 +35,9 @@ Don't forget to edit the 'GUI'!
 Please do not create feature requests, issues or pull requests that request more software. I made this script with the software I use locally. If you want to add or remove software, please just add them to your local script.
 If you need help with that, ask in my airline Discord. https://aegeanairva.com/ 
 Thank you!
+
+# Fix "launcher.ps1 cannot be loaded because running scripts is disabled on this system"
+1. Open an **ADMIN** Power Shell prompt 
+2. Run `Set-ExecutionPolicy Unrestricted`
+3. Press A
+Done! Please note that this allows all PS1 scripts to be executed and can be unsafe.
