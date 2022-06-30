@@ -11,7 +11,7 @@ write-host "  "
 write-host "    -- Launchers --"
 write-host "  "
 write-host "  SA - Launch everything (installers, tools, trackers, fbw tools)"
-write-host "  S1 - Launch installer apps (Navdata, FBW)"
+write-host "  S1 - Launch installer apps (Navdata, FBW, ORBX)"
 write-host "  S2 - Launch tools (simlink, spad)"
 write-host "  S3 - Launch trackers (LRM, Volanta, SkyDolly, FlightEvents)"
 write-host "  S4 - Launch flybywire tools"
@@ -53,6 +53,7 @@ function LauncherStart-Trackers {
 function LauncherStart-Installers {
 	start ".\Navigraph Navdata Center.lnk"
 	start ".\FlyByWire Installer.lnk"
+    start ".\Orbx Central.lnk"
 }
 
 function LauncherStart-Flybywire {
@@ -197,6 +198,8 @@ if ($launchermode -match "OX") {
         taskkill /IM "FlightEvents.Client.exe" /F
 	taskkill /IM "FlyByWire Installer.exe" /F
 	taskkill /IM "FBW_MCDU_SERVER.exe" /F
+	taskkill /IM "Orbx Central.exe" /F
+	taskkill /IM "OrbxCentralWorker.exe" /F
 	
 	Timeout /T 5
 	
