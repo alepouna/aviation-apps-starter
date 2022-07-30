@@ -14,7 +14,7 @@ write-host "  SA - Launch everything (installers, tools, trackers, fbw tools)"
 write-host "  S1 - Launch installer apps (Navdata, FBW, ORBX)"
 write-host "  S2 - Launch tools (simlink, spad)"
 write-host "  S3 - Launch trackers (LRM, Volanta, SkyDolly, FlightEvents)"
-write-host "  S4 - Launch flybywire tools"
+write-host "  S4 - placeholder!"
 write-host "  S5 - Launch com tools (choose)"
 write-host "  SM - Launch MSFS"
 write-host "  "
@@ -54,10 +54,6 @@ function LauncherStart-Installers {
 	start ".\Navigraph Navdata Center.lnk"
 	start ".\FlyByWire Installer.lnk"
     start ".\Orbx Central.lnk"
-}
-
-function LauncherStart-Flybywire {
-	start ".\FBW A320 MCDU Server.lnk"
 }
 
 function LauncherStart-Game {
@@ -102,7 +98,6 @@ if ($launchermode -match "SA") {
 	LauncherStart-Tools
 	LauncherStart-Trackers
 	LauncherStart-Installers
-	LauncherStart-Flybywire
 	
 
 	# Start MSFS?
@@ -137,7 +132,6 @@ if ($launchermode -match "S3") {
 
 if ($launchermode -match "S4") {
 	
-	LauncherStart-FlyByWire
 	exit
 	
 } 
@@ -195,11 +189,9 @@ if ($launchermode -match "OX") {
 	taskkill /IM "Volanta.exe" /F
 	taskkill /IM "LRM.exe" /F
 	taskkill /IM "SkyDolly.exe" /F
-        taskkill /IM "FlightEvents.Client.exe" /F
+    taskkill /IM "FlightEvents.Client.exe" /F
 	taskkill /IM "FlyByWire Installer.exe" /F
-	taskkill /IM "FBW_MCDU_SERVER.exe" /F
-	taskkill /IM "Orbx Central.exe" /F
-	taskkill /IM "OrbxCentralWorker.exe" /F
+	taskkill /IM "fbw-simbridge.exe" /F
 	
 	Timeout /T 5
 	
